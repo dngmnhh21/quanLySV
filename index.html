@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Title</title>
+  <title>Quản lý sinh viên</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,10 +22,21 @@
                 <div class="form-group">
                     <p>Mã sinh viên</p>
                     <input id="maSinhVien" class="form-control">
+                    <span id="error_maSinhVien_required" class="text text-danger"></span>
+                    <span id="error_maSinhVien_all_number" class="text text-danger"></span>
+                    <span id="error_maSinhVien_min_max" class="text text-danger"></span>
                 </div>
                 <div class="form-group">
                     <p>Tên sinh viên</p>
                     <input id="tenSinhVien" class="form-control">
+                    <span id="error_tenSinhVien_required" class="text text-danger"></span>
+                    <span id="error_tenSinhVien_all_letter" class="text text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <p>Email</p>
+                    <input id="email" class="form-control">
+                    <span id="error_email_required" class="text text-danger"></span>
+                    <span id="error_email" class="text text-danger"></span>
                 </div>
                 <div class="form-group">
                     <p>Loại sinh viên</p>
@@ -39,20 +50,32 @@
                         <div class="col-4">
                             <p>Điểm toán</p>
                             <input id="diemToan" class="form-control">
+                            <span id="error_diemToan_required" class="text text-danger"></span>
+                            <span id="error_diemToan_all_number" class="text text-danger"></span>
+                            <span id="error_diemToan_minMax_value" class="text text-danger"></span>
                         </div>
                         <div class="col-4">
                             <p>Điểm lý</p>
                             <input id="diemLy" class="form-control">
+                            <span id="error_diemLy_required" class="text text-danger"></span>
+                            <span id="error_diemLy_all_number" class="text text-danger"></span>
+                            <span id="error_diemLy_minMax_value" class="text text-danger"></span>
                         </div>
                         <div class="col-4">
                             <p>Điểm hóa</p>
                             <input id="diemHoa" class="form-control">
+                            <span id="error_diemHoa_required" class="text text-danger"></span>
+                            <span id="error_diemHoa_all_number" class="text text-danger"></span>
+                            <span id="error_diemHoa_minMax_value" class="text text-danger"></span>
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
                     <p>Điểm rèn luyện</p>
                     <input id="diemRenLuyen" class="form-control">
+                    <span id="error_diemRenLuyen_required" class="text text-danger"></span>
+                    <span id="error_diemRenLuyen_all_number" class="text text-danger"></span>
+                    <span id="error_diemRenLuyen_minMax_value" class="text text-danger"></span>
                 </div>
                 <div class="form-group text-center">
                     <button id="btnXacNhan" class="btn btn-success mt-4">Xác nhận</button>
@@ -62,6 +85,7 @@
                 <h3 class="display-4 text-center">Thông tin sinh viên</h3>
                 <p>Tên sinh viên: <span id="txtTenSinhVien" style="font-weight: bold;"></span></p>
                 <p>Mã sinh viên: <span id="txtMaSinhVien" style="font-weight: bold;"></span></p>
+                <p>Email: <span id="txtEmail" style="font-weight: bold;"></span></p>
                 <p>Loại sinh viên: <span id="txtLoaiSinhVien" style="font-weight: bold;"></span></p>
                 <p>Điểm trung bình: <span id="txtDiemTrungBinh" style="font-weight: bold;"></span></p>
                 <p>Xếp loại: <span id="txtXepLoai" style="font-weight: bold;"></span></p>
@@ -81,6 +105,8 @@
   </script>
 
   <!-- <script src="script.js"></script> -->
+  <script src="./model/Validation.js"></script>
+  <script src="./model/SinhVien.js"></script>
   <script src="scriptOOP.js"></script>
 </body>
 
